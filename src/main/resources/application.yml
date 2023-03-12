@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/qing?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+# ??mybatis
+mybatis:
+  type-aliases-package: zxc.pojo
+  mapper-locations: classpath:/mybatis/*.xml
+
+# ??????
+logging:
+  file:
+    name: log/log.log
+  level:
+    root: info
+    zxc: debug
